@@ -1,0 +1,536 @@
+html{
+    scroll-behavior: smooth;
+}
+@font-face{
+    font-family: open-sans;
+    src: url(../font/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+@font-face{
+    font-family: raleway;
+    src: url(../font/Raleway/Raleway-VariableFont_wght.ttf);
+}
+body{
+    margin: 0;
+    
+}
+header>h1{
+    display: inline-block;
+    color: white;
+    margin-left: 100px;
+    margin: 10px;
+    padding: 10px;
+    font-family: raleway;
+}
+header{
+    background-color: rgb(87, 190, 242);
+    margin: 0;
+    /* overflow: auto; */
+}
+nav,nav>ul>li{
+    display: inline-block;
+}
+nav{
+    float: right;
+    margin-right: 100px;
+    margin: 20px;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+    padding: 9px;
+    font-family: raleway;
+    font-size: 1.3em;
+}
+nav a:hover{
+    color: blue;
+    background-color: rgb(222, 219, 219);
+}
+.dropdown{
+    position: relative;
+}
+.ddcontent{
+    position: absolute;
+    background-color: rgb(225, 225, 225);
+    box-shadow: 0 10px 10px 10px rgb(160, 160,160);
+    list-style: none;
+    display: none; 
+    z-index: 1000;
+    width: 100%;
+    min-width: 117px;
+    padding: 12px 16px ;
+    padding-left: 0;
+    left: 2px;
+    top :calc(100% + 9px);
+}
+.ddcontent a{
+    color: black;
+    background-color: transparent;
+}
+.ddcontent a:hover{
+    background-color: transparent;
+}
+.dropdown:hover .ddcontent{
+    display: block;
+    color: rgb(225, 225, 225);
+    background-color: transparent;   
+}
+    /* section 1 grande image */
+  
+#section1{
+    background-image: url(../img/hero-bg.jpg);
+    background-size: cover;
+    height: 100vh;
+    margin: 0px;
+    width:100%;
+    text-align: center;
+    color: white; 
+    background-attachment: fixed;
+}
+#section1 h1{
+    margin:0;
+    font-size: 3.5em;
+    text-shadow: -0.5px 0.5px 2px rgb(0, 2, 92);
+     
+}
+#section1 p{
+  font-size: 1.5em;
+  font-family: open-sans;
+  font-weight: 900;
+  text-shadow: 0px 0.5px 2px rgb(0, 2, 92);
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+#section1 div{
+    box-sizing: border-box;
+    padding: 10% 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(101, 164, 246, 0.3);     
+}
+#section1 a{
+    border: 2px solid white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: block;
+  position: relative;
+  margin: auto;
+  color:white;
+  font-size: 1.5em;
+  padding: 14px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in;
+  
+}
+/* #section1 i{
+    position: absolute;
+  font-size: 2em;
+  transform: translate(-50%, 50%);
+  color: white; 
+}*/
+#section1 a:hover{
+    
+    padding: 18px;
+    background: rgba(202, 201, 201, 0.741);
+}
+.inline-block{
+    display: inline-block;
+    vertical-align: top;
+}
+#sec1{
+    display: block;
+    margin:auto;
+    padding:50px;
+    background:linear-gradient(rgba(226, 221, 221, 0.5),
+                               rgba(255, 255, 255, 0.5)),
+                url(../img/about-bg.jpg);
+    background-size: cover;
+}
+#article1 {
+    width: 35%;
+    padding-top: 20px;
+}
+  
+#article1 h2 {
+    font-size: 2.5em;
+}
+  
+#article1 a {
+    display: inline-block;
+    /* margin-top: 20px; */
+    padding: 10px 30px;
+    background-color: #64a7c5;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+}
+  
+#article2 {
+    width: 50%;
+    margin-left: 30px;
+}
+  
+#article2 div {
+    width: 45%;
+    margin: 10px;
+}
+#article2 div i{
+  font-size: xx-large;
+  color: #64a7c5;
+}
+/* section service */
+#sec2{
+    padding: 50px 70px;
+}
+#sec2 h2{
+    background: url(../img/section-title-bg.png) center no-repeat;
+    padding: 20px 0;
+}
+#sec2 h2,#sec2>p{
+    text-align: center;
+}
+#sec2 article{
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px gray;
+    padding: 30px;
+    position:relative;
+    z-index: 10;
+    transition: all 0.3s ease-in-out ;
+    
+}
+#sec2 article::before{
+    content: "";
+    border-radius: 10px;
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    top: 100%;
+    left: 0;
+    right: 0;
+    /* opacity: 0; */
+    transition: 0.3s ease-in-out ;
+}
+#sec2 article:hover::before{
+    top:0;
+    background-color: #64a7c5;
+    color: white;
+    /* opacity: 1; */
+}
+#sec2 article:hover,#sec2 article:hover i{
+    color: white;
+}
+.flex-content{
+    display: flex;
+    justify-content: space-between;
+    /* gap:20px; */
+}
+#sec2 i{
+    font-size: 30px;
+    color:rgb(26, 190, 240) ;
+    transition: all 0.3s ease-in-out ;
+}
+#sec3{
+    padding: 50px 70px;
+}
+#sec3 h2{
+    background: url(../img/section-title-bg.png) center no-repeat;
+    padding: 20px 0;
+}
+#sec3 h2,#sec3 p{
+    text-align: center;
+}
+#sec3 div h4,#sec3 div p{
+    text-align: center;
+    margin: auto;
+}
+.flex-contact div{
+    width: 224px;
+    height: 20vh;
+    border: 30px solid transparent;
+    box-shadow: 0px 0px 10px rgb(221, 220, 220);
+    padding: 10px;
+}
+.flex-contact{
+    display: flex;
+    gap: 20px;
+    /* justify-content: flex-end; */
+    
+}
+#sec3 i{
+    font-size: 30px;
+    color:rgb(26, 190, 240) ;
+    margin: auto;
+}
+#sec1-2{
+    background-image: url(../img/cta-bg.jpg);
+    background-size: cover;
+    padding:70px;
+    text-align: center;
+}
+#sec1-2 h3{
+    text-align: center;
+    font-size: 2em;
+    color:white;
+    font-family: open-sans;
+}
+#sec1-2 p{
+    text-align: center;
+    font-size: 1.5em;
+    margin:auto;
+    color:white;
+    font-family: open-sans;
+}
+#sec1-2 a{
+    text-transform: uppercase;
+    color:white;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 30px;
+    padding:10px;
+    display: inline-block;
+    margin-top: 40px;
+}
+#sec4{
+    /* display:flex; */
+}
+#sec4 h2{
+    text-align: center;
+    font-size:2em;
+    font-family: open-sans;
+    background: url(../img/section-title-bg.png) center no-repeat;
+    padding:20px 0;
+}
+#sec4 p{
+    text-align: center;
+    font-family: open-sans;
+    font-size: 1em;
+}
+#sec4 ul {
+    display: flex;
+    list-style: none;
+    border-radius: 30px;
+    padding:8px;
+    background-color: #ecf5f9;
+    width:16%;
+    margin:auto;
+    color: #2e4d5d;
+
+}
+#sec4 a{
+    text-decoration: none;
+    margin:10px;
+    font-family:open-sans;
+}
+#sec4 a:hover{
+    color: #80dbf5;
+}
+#sec4 a:active{
+    color:#80dbf5;
+}
+#sec4 .imgs img{
+    width: 400px;
+}
+#sec4 .imgs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    row-gap: 30px;
+    margin-top: 40px;
+}
+.flex-contact #loc{
+    flex-grow:5
+}
+#sec5 h2{
+    text-align: center;
+    font-family: open-sans;
+    background: url(../img/section-title-bg.png) center no-repeat;
+    padding:20px 0;
+}
+#sec5 p{
+    text-align: center;
+    font-family: open-sans;
+    font-size: 1em;
+}
+.testi-flex{
+    display: flex;
+    justify-content: space-evenly;
+}
+#sec5 .testi-flex div{
+    width: 25%;
+    height: 25vh;
+    border: 30px solid transparent;
+    box-shadow: 0px 0px 10px rgb(221, 220, 220);
+    border-radius: 10px;  
+}
+/* ----------------section Team----------- */
+#sec6 h2{
+    text-align: center;
+    font-family: open-sans;
+    background: url(../img/section-title-bg.png) center no-repeat;
+    padding:20px 0;
+    color:#2e4d5d;
+}
+#sec6 p{
+    text-align: center;
+    font-family: open-sans;
+    font-size: 1em;
+    color:#2e4d5d;
+}
+.team{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.team img{
+    width:350px; 
+}
+.personage{
+    position:relative; 
+}
+#sec6 .info-team{
+    position:absolute;
+    width: 20vw;
+    height: 11vh;
+    background-color: white;
+    border: 2px solid transparent;
+    bottom: -25px;
+    left: 34px;
+    box-shadow: 0px 2px 6px 0px rgb(221, 220, 220);
+} 
+#sec6 .info-team h4::after{
+    content: "";
+    border-bottom: #64a7c5 2px solid;
+    display: block;
+    margin: auto;
+    margin-top: 8px;
+    width: 80px;
+}
+#sec6 .info-team h4,#sec6 .info-team p{
+    text-align: center;
+    font-family: open-sans;
+    margin: 5px;
+    box-sizing: border-box;
+    font-style: italic;
+    color:#2e4d5d;
+}
+/* ------------formulaire---------- */
+#map{
+    width:470px;
+    height: 400px;
+    margin-top: 40px;
+    
+
+}
+#form{
+    width: 450px;
+    height: 50vh;
+    border: 30px solid transparent;
+    box-shadow: 0px 0px 10px rgb(221, 220, 220);
+    vertical-align: top;
+    margin-top: 40px;
+}
+.flexform{
+    display: flex;
+    gap: 100px;
+}
+#form div input,textarea{
+    padding: 10px;
+    margin-bottom: 5px;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 3px rgb(221, 220, 220);
+    background-color: white;
+}#form .sub{
+    width: 33.5vw;
+}
+ #mail{
+    width: 14vw;
+ }
+#form  form button{
+    padding: 10px;
+    text-align: center;
+    background-color: #64a7c5;
+    color: white;
+    border: none;
+    margin: auto;
+    display: block;
+}
+.name{
+    width: 45vw;
+}
+footer{
+    background-color: rgb(34, 32, 32);
+    margin-top:50px;
+    height: 50vh;
+    width: 100%;
+    width: 100%;
+    position: relative;
+}
+footer address{
+    background-color: white;
+    height: 40vh;
+    width: 20vw;
+    border-top: 4px solid rgb(26, 190, 240);
+    padding: 10px;
+    position: absolute;
+    top:-50px;
+    margin-left: 50px;
+}
+.adress{
+    text-align: center;
+}
+.ct-footer{
+    display: flex;
+    justify-content: space-between;
+    margin-right:10px ;
+}
+.ct-footer .list1 {
+    padding: 30px;
+  margin-left:255px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  color: white;
+  width: 49%;
+}
+.ct-footer .list2 {
+    padding: 30px;
+  margin-right: 48px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  color: white;
+  width: 50%;
+}
+.ct-footer .list3 {
+  margin-right:210px;
+  margin-top: 33px;
+  box-sizing: border-box;
+  color: white;
+  width: 30%;
+}
+.ct-footer ul li{
+    list-style: none;
+    margin: 5px;
+}
+.ct-footer a{
+    text-decoration: none;
+    font-size: 1em;
+    color: white;
+}
+.ct-footer input{
+    display: inline;
+    padding: 5px;
+    box-sizing: border-box;
+    outline: none;
+}
+.ct-footer button{
+    padding: 5px;
+    background-color: #64a7c5;
+    color: white;
+    border:none;
+    float: right;
+}
+#sub2{
+    display: flex;
+}
