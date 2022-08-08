@@ -4,20 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Raleway:wght@100&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="css/style.css" />
     <title>SQUADFREE</title>
   </head>
   <body>
-    <header>
-      <h1>SQUADFREE</h1>
+    <header >
+      <h1 class="animate__animated animate__flip">SQUADFREE</h1>
       <nav>
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#sec1">About Us</a></li>
           <li><a href="#sec2">Services</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Team</a></li>
+          <li><a href="#sec4">Portfolio</a></li>
+          <li><a href="#sec6">Team</a></li>
           <li class="dropdown">
             <a href="#">Drop Down <i class="fa-solid fa-chevron-down"></i></a>
             <ul class="ddcontent">
@@ -162,28 +169,49 @@
       <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam
         cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste ociis commodi quidem hic quas</p>
         <div class="team">
-          <div class="personage">
+          <div class="personage" id="per1">
           <img src="img/team/team-1.jpg" alt="team1">
           <div class="info-team">
             <h4>Walter White</h4>
             <p>Chief Executive Officer</p>
+          
+          <div class="social">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin"></i>
           </div>
         </div>
-        <div class="personage">
+      </div>
+        <div class="personage" id="per2">
           <img src="img/team/team-2.jpg" alt="team2">
           <div class="info-team">
             <h4>Sarah Jhonson</h4>
             <p>Product Manager</p>
+          
+          <div class="social">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin"></i>
           </div>
         </div>
-        <div class="personage">
+      </div>
+        <div class="personage" id="per3">
           <img src="img/team/team-3.jpg" alt="team3">
           <div class="info-team">
             <h4>William Anderson</h4>
             <p>CTO</p>
+          
+          <div class="social">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin"></i>
           </div>
         </div>
       </div>
+    </div>
     </section>
      <!-- contact -->
      <section id="sec3">
@@ -208,24 +236,23 @@
       </div>
       </article>
       <div class="flexform">
-      <article class="flex-contact" id="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d11050.261470957426!2d6.127334!3d46.179307!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sma!4v1659946111029!5m2!1sfr!2sma" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </article>
-      <!-- formulaire -->
-      <article id="form">      
-       <form action="">
+      
+        <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d11050.261470957426!2d6.127334!3d46.179307!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sma!4v1659946111029!5m2!1sfr!2sma" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="maps"></iframe>
+      <!-- formulaire -->      
+       <form>
         <div class="name"><input type="text" placeholder="Your Name" id="nom" >
         <input type="email" placeholder="Your Email" id="mail"></div>
         <div><input type="text" placeholder="Subject" class="sub"></div>
-        <div><textarea name="text" id="vide" cols="55" rows="10" placeholder="Message"></textarea></div>
+        <div><textarea name="text" id="vide" cols="30" rows="10" placeholder="Message"></textarea></div>
         <button>Send Message</button>
        </form>
-      </article>
+      
     </div>
     </section>
 </main>
 <!-- footer -->
     <footer>
+      <div>
       <address class="adress"> 
         <h3>Squadfree</h3>
         <p>
@@ -235,6 +262,7 @@
           <div><strong> Email:</strong> info@example.com</em></div>
         </p> 
       </address>
+    </div>
       <div class="ct-footer">
         <div class="list1">
       <ul>
@@ -264,6 +292,7 @@
         </div>
       </div>
     </div>
+    <a class="scroll-top" href="#"><i class="fa-solid fa-arrow-up"></i></a>
     </footer> 
   </body>
 </html>
