@@ -576,18 +576,15 @@ footer address{
 .ct-footer{
     display: flex;
     justify-content: space-between;
-    margin-right:10px ;
 }
 .ct-footer .list1 {
-    padding: 30px;
-  margin-left:255px;
+  margin-left:355px;
   margin-top: 5px;
   box-sizing: border-box;
   color: white;
   width: 49%;
 }
 .ct-footer .list2 {
-    padding: 30px;
   margin-right: 48px;
   margin-top: 5px;
   box-sizing: border-box;
@@ -646,7 +643,7 @@ p{
     content: "";
     border-bottom: #317c9e 1.5px solid;
     display: block;
-    margin: 8px auto;
+    margin: 35px auto;
     width: 90%;
 }
 footer .scroll-top{
