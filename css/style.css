@@ -16,19 +16,19 @@ body{
 header>h1{
     display: inline-block;
     color: white;
-    margin-left: 100px;
-    margin: 10px;
-    padding: 10px;
+    margin: 10px 10px 10px 50px;
+    padding: 2px;
     font-family: raleway;
 }
 header{
     background-color: rgb(87, 190, 242);
     color: white;
-    padding: 5px;
+    padding: 2px;
     position: sticky;
     top: 0;
     z-index: 500;
     margin: 0;
+    overflow: auto;
 }
 nav,nav>ul>li{
     display: inline-block;
@@ -101,7 +101,7 @@ nav a:hover{
   font-size: 1.5em;
   font-family: open-sans;
   font-weight: 900;
-  text-shadow: 0px 0.5px 2px rgb(0, 2, 92);
+  text-shadow: 0px 0.5px 2px rgb(0, 2, 92) !important;
   margin-top: 0;
   margin-bottom: 50px;
 }
@@ -146,7 +146,7 @@ nav a:hover{
     background-size: cover;
 }
 #article1 {
-    width: 35%;
+    width: 45%;
     padding-top: 20px;
 }
   
@@ -166,7 +166,7 @@ nav a:hover{
   
 #article2 {
     width: 50%;
-    margin-left: 30px;
+    margin-left: 40px;
 }
   
 #article2 div {
@@ -194,7 +194,7 @@ nav a:hover{
 #sec2 article{
     width: 200px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px gray;
+    box-shadow: 0px 0px 5px gray;
     padding: 30px;
     position:relative;
     z-index: 10;
@@ -232,8 +232,10 @@ nav a:hover{
     color:rgb(26, 190, 240) ;
     transition: all 0.3s ease-in-out ;
 }
+/* -------------contact---------- */
 #sec3{
-    padding: 50px 70px;
+    background-color: #f4f9fc;
+    padding: 0 70px;
 }
 #sec3 h2{
     background: url(../img/section-title-bg.png) center no-repeat;
@@ -249,6 +251,10 @@ nav a:hover{
     text-align: center;
     margin: auto;
 }
+#sec3>p{
+    margin: 0 20px 10px 20px;
+    color:#2e4d5d;
+}
 .flex-contact div{
     width: 224px;
     height: 20vh;
@@ -259,6 +265,7 @@ nav a:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: white;
 }
 .flex-contact{
     display: flex;
@@ -295,6 +302,7 @@ nav a:hover{
 #sec1-2 a{
     text-transform: uppercase;
     color:white;
+    font-family: open-sans;
     text-decoration: none;
     border: 2px solid white;
     border-radius: 30px;
@@ -310,10 +318,12 @@ nav a:hover{
     padding:20px 0;
     color:#2e4d5d;
 }
-#sec4 p{
+#sec4>p{
     text-align: center;
     font-family: open-sans;
     font-size: 1em;
+    margin: 0 20px 10px 20px;
+    color:#2e4d5d;
 }
 #sec4 ul {
     display: flex;
@@ -352,6 +362,10 @@ nav a:hover{
 .flex-contact #loc{
     flex-grow:5
 }
+/* --------------testi----------- */
+#sec5{
+    background-color: #f4f9fc;
+}
 #sec5 h2{
     text-align: center;
     font-family: open-sans;
@@ -359,23 +373,35 @@ nav a:hover{
     padding:20px 0;
     color:#2e4d5d;
     font-size: 2em;
+    margin-bottom: 5px;
 }
-#sec5 p{
+#sec5>p{
     text-align: center;
     font-family: open-sans;
     font-size: 1em;
+    margin: 0 20px 20px 20px;
+    color:#2e4d5d;
 }
 .testi-flex{
     display: flex;
     justify-content: center;
     gap: 30PX;
 }
+.testi-flex p{
+    color:#2e4d5d;
+}
+
 #sec5 .testi-flex div{
     width: 24%;
     height: 28vh;
     border: 30px solid transparent;
     box-shadow: 0px 0px 10px rgb(221, 220, 220);
+    background-color: white;
     border-radius: 5px;  
+}
+#sec5 i{
+    color: #d5e9f2;
+    vertical-align: top;
 }
 /* ----------------section Team----------- */
 #sec6 h2{
@@ -386,11 +412,12 @@ nav a:hover{
     padding:20px 0;
     color:#2e4d5d;
 }
-#sec6 p{
+#sec6>p{
     text-align: center;
     font-family: open-sans;
     font-size: 1em;
     color:#2e4d5d;
+    margin: 0 20px 10px 20px;
 }
 .team{
     display: flex;
@@ -411,34 +438,43 @@ nav a:hover{
     position:relative; 
 }
 #per1{
-    animation: move-to-top 0.5s ease-in;
+    animation: move-img 0.5s ease-in;
 }
   
 #per2{
-    animation: move-to-top 1s ease-in;
+    animation: move-img 1s ease-in;
 }
   
 #per3{
-    animation: move-to-top 1.5s ease-in;
+    animation: move-img 1.5s ease-in;
 }
+@keyframes move-img {
+    from {
+      top: 100px;
+      opacity: 0;
+    }
+    to {
+      top: 0;
+      opacity: 1;
+    }
+  }
   
-#sec6 .info-team{
+.info-team{
     position:absolute;
     width: 20vw;
-    height: 11vh;
     background-color: white;
     border: 2px solid transparent;
-    bottom: -25px;
+    /* bottom: -25px; */
     left: 34px;
     box-shadow: 0px 2px 6px 0px rgb(221, 220, 220);
     text-align: center;
     transition: max-height 0.3s;
-    max-height: 95px;
+    max-height: 55px;
     overflow: hidden;
     top: 80%;
-  padding: 15px;
+    padding: 15px;
 } 
-#sec6 .info-team h4::after{
+.info-team h4::after{
     content: "";
     border-bottom: #64a7c5 2px solid;
     display: block;
@@ -447,7 +483,7 @@ nav a:hover{
 }
 #sec6 .social {
     font-size: 1.2em;
-    /* margin-top: 10px; */
+    margin-top: 10px;
   }
 #sec6 .info-team h4,#sec6 .info-team p{
     text-align: center;
@@ -457,8 +493,10 @@ nav a:hover{
     font-style: italic;
     color:#2e4d5d;
 }
-.personage:hover #sec6 .info-team{
-    max-height: 150px;
+
+.personage:hover .info-team{
+    max-height: 100px;
+    /* color: #ecf5f9; */
   }
 /* ------------formulaire---------- */
 #maps{
@@ -474,6 +512,7 @@ form{
     box-shadow: 0px 0px 10px rgb(221, 220, 220);
     vertical-align: top;
     margin-top: 40px;
+    background-color: white;
 }
 .flexform{
     display: flex;
@@ -507,9 +546,10 @@ form button{
 .name{
     width: 45vw;
 }
+/* ------------ footer-------------- */
 footer{
-    background-color: rgb(34, 32, 32);
-    margin-top:50px;
+    background-color: #263f49;
+    margin-top:100px;
     height: 60vh;
     width: 100%;
     position: relative;
@@ -526,6 +566,8 @@ footer address{
 }
 .adress{
     text-align: center;
+    color: #263f49;
+    font-size: 14px;
 }
 .ct-footer{
     display: flex;
@@ -557,12 +599,13 @@ footer address{
 }
 .ct-footer ul li{
     list-style: none;
-    margin: 5px;
+    margin: 5px; 
 }
 .ct-footer a{
     text-decoration: none;
     font-size: 0,5em;
     color: white;
+    font-family: open-sans;
 }
 .ct-footer input{
     display: inline;
@@ -583,6 +626,25 @@ footer address{
 p{
     font-family: open-sans;
 }
+.copy{
+    text-align: center;
+    font-family: open-sans;
+    font-size: 0.8em;
+    color: white;
+}
+.copy p a{
+    font-family: open-sans;
+    font-size: 1em;
+    text-decoration: none;
+    color: #317c9e;
+}
+.copy::before{
+    content: "";
+    border-bottom: #317c9e 1.5px solid;
+    display: block;
+    margin: 8px auto;
+    width: 90%;
+}
 footer .scroll-top{
     position: fixed;
     right: 20px;
@@ -597,5 +659,8 @@ footer .scroll-top{
     align-items: center;
     text-decoration: none;
     box-shadow: 1px 1px 2px gray;
-  
   }
+.social2 i{
+    margin: 5px;
+    font-size: 20px;
+}
